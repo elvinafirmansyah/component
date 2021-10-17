@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	font-family: 'Quicksand', sans-serif;
+}
+nav{
+	height: 60px;
+	width: 100%;
+}
+.logo{
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 60px;
+	padding: 0 5%;
+	cursor: pointer;
+}
+nav ul{
+	float: right;
+	margin-right: 20px;
+	padding: 0 5%;
+}
+nav ul li{
+	display: inline-block;
+	line-height: 60px;
+	margin: 0 10px;
+}
+nav ul li a{
+	font-size: 17.5px;
+	font-weight: 600;
+}
+nav ul li a:hover{
+	color: gray;
+}
+.checkbtn{
+	font-size: 26px;
+	float: right;
+	line-height: 60px;
+	margin-right: 25px;
+	cursor: pointer;
+	display: none;
+}
+#check{
+	display: none;
+}		
+@media (max-width: 952px){
+	label .logo{
+		font-size: 30px;
+	}
+	nav ul li a{
+		font-size: 16px;
+	}
+}
+@media (max-width: 858px){
+	.checkbtn{
+		display: block;
+	}
+	ul{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: #71ad9b;
+		top: 60px;
+		left: -100%;
+		text-align: center;
+		transition: all 0.5s;
+	}
+	nav ul li{
+		display: block;
+		margin: 88px 0;
+	}
+	nav ul li a{
+		font-size: 20px;
+	}
+	nav ul li a:hover{
+		color: gray;
+	}
+	#check:checked ~ ul{
+		left: 0;
+	}
+}
