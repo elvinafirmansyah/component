@@ -1,0 +1,23 @@
+// Membuat background-color
+@mixin bg-color($colors) {
+    @each $key, $value in $colors {
+        .bg-#{$key} {
+            background-color: $value;
+        }
+    }
+}
+
+.bg-white {
+    background-color: $white;
+}
+.bg-black {
+    background-color: $black;
+}
+.bg-transparent {
+    background-color: transparent;
+}
+
+// Melakukan perulangan untuk semua warna
+@each $key, $value in $colors {
+    @include bg-color($value);
+}
